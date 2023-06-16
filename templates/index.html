@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <link rel="shortcut icon" href="http://www.example.com/myicon.ico"/>
+        <title>Homepage</title>
+        <meta name="description" content="Ethan Ortiz's Website">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <style>
+            </style>
+    </head>
+    <body id="grad">
+        <center>
+            <table><tr><td><h1>Ethan Ortiz</h1></td></tr></table>
+            <hr>
+                <img src="{{ url_for('static', filename='ethan-france.png') }}" alt="Village Portrait" width="270" height="360">
+                <img src="{{ url_for('static', filename='ethan-hiking.png') }}" alt="Hiking Portrait" width="270" height="360">
+            
+            <hr>
+            <table><tr><td>
+                <p>Email: <a href="mailto:ethan@loszitros.com">ethan@loszitros.com</a></p>
+                <p>Resume: <a href="ortiz-ethan-resume.html">Link</a>,  <a href="ortiz-ethan-resume.pdf">PDF </a></p>
+                <p><a href="https://github.com/ethanortiz25?tab=repositories" title="ethanortiz25">GitHub </a></p>
+                <p><a href="https://www.linkedin.com/in/ethan-ortiz-0b3aa5249" title="ethan-ortiz-0b3aa5249">LinkedIn </a></p>
+            </td></tr></table>
+            <hr>
+            <form action="/login">
+                <input type="submit" value="Spotify Stats!">
+            </form>
+        </center>
+    </body>
+    
+</html>

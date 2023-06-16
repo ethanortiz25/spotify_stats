@@ -1,0 +1,86 @@
+h1 {
+    font-size: 75px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* color: #303030;
+    border: 2px solid #303030;
+    background-color: #ffffff; */
+}
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+    font-family: Arial;
+}
+table {
+    border: 2px solid #000000;
+    background-color: #252525;
+    color: white;
+    font-size: 28px;
+
+}
+body {
+    background-color: #ff8d85;
+}
+hr {
+    height: 1px;
+    background-color: #000000;
+    border: none;
+}
+img {
+    border: 2px solid #000000;
+}
+#grad {
+    /* background-image: linear-gradient(180deg, rgb(29, 27, 41), #303030); */
+    
+    background-color: #252525;;
+}
+a {
+    color: rgb(113, 210, 255);
+}
+button {
+    width: 200px; /* Set a fixed width for the buttons */
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #000000;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+.data-group {
+    display: none;
+    justify-content: center;
+}
+
+.data-group.active {
+    display: block;
+    justify-content: center;
+}
+
+.borderlesss_table {
+    border: 2px solid #252525;
+    background-color: #252525;
+    color: white;
+    font-size: 24px;
+    width: 100%;
+
+}
+.secondary_text {
+    color: rgb(197, 226, 255);
+    font-size: 16px;
+    text-align: left;
+    width: 600px;
+}
+.album_text {
+    color: rgb(197, 226, 255);
+    font-size: 16px;
+    display: block;
+    text-align: left;
+    margin-right: 30px;
+}
+.song_length {
+    color: rgb(197, 226, 255);
+    font-size: 16px;
+    text-align: right;
+}
