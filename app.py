@@ -3,11 +3,13 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth, CacheFileHandler
 
 app = Flask(__name__)
+ip = "ethanortiz.azurewebsites.net"
+url = 'http://' + ip # + ":80"
 
 app.secret_key = b'MAKEITSTOPMAKEITSTOP'
 client_id = '05d1acf34f664eb8a4df5132a5de17e1'
 client_secret = '191ef9f2fdad47258215d41ae29e1601'
-redirect_uri = 'http://localhost:8888/callback'
+redirect_uri = url + '/callback'
 
 class NoCacheHandler(CacheFileHandler):
     def __init__(self):
@@ -115,4 +117,4 @@ def format_song_name(name):
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=8888)
+    app.run(debug=False, host='0.0.0.0')
