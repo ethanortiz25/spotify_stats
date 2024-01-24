@@ -1,33 +1,138 @@
-<!doctype html>
+<!doctype html><!-- Add Bootstrap CSS -->
+
 <html>
     
     <head>
-        <link rel="shortcut icon" href="http://www.example.com/myicon.ico"/>
         <title>Homepage</title>
         <meta name="description" content="Ethan Ortiz's Website">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scrolling Navbar</title>
+        <!-- Include Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-        <style>
-            </style>
     </head>
-    <body id="grad">
-        <center>
-            <table><tr><td><h1>Ethan Ortiz</h1></td></tr></table>
-            <hr>
-                <img src="{{ url_for('static', filename='ethan-france.png') }}" alt="Village Portrait" width="270" height="360">
-                <img src="{{ url_for('static', filename='ethan-hiking.png') }}" alt="Hiking Portrait" width="270" height="360">
-            
-            <hr>
-            <table><tr><td>
-                <p>Email: <a href="mailto:ethan@loszitros.com">ethan@loszitros.com</a></p>
-                <p>Resume: <a href="ortiz-ethan-resume.html">Link</a>,  <a href="ortiz-ethan-resume.pdf">PDF </a></p>
-                <p><a href="https://github.com/ethanortiz25?tab=repositories" title="ethanortiz25">GitHub </a></p>
-                <p><a href="https://www.linkedin.com/in/ethan-ortiz-0b3aa5249" title="ethan-ortiz-0b3aa5249">LinkedIn </a></p>
-            </td></tr></table>
-            <hr>
-            <form action="/login">
-                <input type="submit" value="Spotify Stats!">
-            </form>
+    <body id="grad" class = "bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top"> 
+            <a class="navbar-brand" href="#">Ethan Ortiz</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('static', filename='ethanortiz-resume.pdf') }}">Resume</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Personal Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/login" title="Spotify Stats">Top Songs for Spotify</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/wordle_solver" title="Wordle Solver">Wordle Solver</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://github.com/ethanortiz25?tab=repositories" title="ethanortiz25">GitHub</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Contact
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="dropdown-item email" onclick="copyEmailToClipboard()" title="Copy to Clipboard!">Email</div>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item email" onclick="copyPhoneToClipboard()" title="Copy to Clipboard!">Phone</div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/ethan-ortiz-0b3aa5249" title="ethan-ortiz-0b3aa5249">LinkedIn</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://www.instagram.com/e.as.in.edward/" title="e.as.in.edward">Instagram</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <center class = "main-content">
+                <img src="{{ url_for('static', filename='pictures/dune_landscape.jpg') }}" alt="Dune Picture" width="960" height="640">
+                <img src="{{ url_for('static', filename='pictures/ethan-france.png') }}" alt="Village Portrait" width="540" height="720">
+                <img src="{{ url_for('static', filename='pictures/ethan-hiking.png') }}" alt="Hiking Portrait" width="540" height="720">
+                <img src="{{ url_for('static', filename='pictures/tent.jpg') }}" alt="Tent Picture" width="960" height="640">
         </center>
+        <footer class="bg-footer text-white text-center py-4">
+            <div class="container mx-auto">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Contact</h4>
+                            <p>Email: <a class="email" onclick="copyEmailToClipboard()">ethan@loszitros.com</a></p>
+                            <p>Phone: <a class="email" onclick="copyPhoneToClipboard()">(512) 923-3309</a></p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Links</h4>
+                            <p>
+                                <a href="https://www.linkedin.com/in/ethan-ortiz-0b3aa5249" title="ethan-ortiz-0b3aa5249">
+                                <img src="{{ url_for('static', filename='linkedin_logo.png') }}" alt="LinkedIn Logo" class = "logo"></a>
+                                <a href="https://www.instagram.com/e.as.in.edward/" title="e.as.in.edward">
+                                <img src="{{ url_for('static', filename='instagram_logo.png') }}" alt="Instagram Logo" class = "logo"></a>
+                                <a href="https://github.com/ethanortiz25?tab=repositories" title="ethanortiz25">
+                                <img src="{{ url_for('static', filename='github_logo.png') }}" alt="Github Logo" class = "logo"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            function copyEmailToClipboard() {
+                const emailText = "ethan@loszitros.com";
+                const tempElement = document.createElement('textarea');
+                tempElement.value = emailText;
+                document.body.appendChild(tempElement);
+                tempElement.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempElement);
+                
+                showToast("Copied to clipboard!");
+            }
+            function copyPhoneToClipboard() {
+                const emailText = "5129233309";
+                const tempElement = document.createElement('textarea');
+                tempElement.value = emailText;
+                document.body.appendChild(tempElement);
+                tempElement.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempElement);
+                
+                showToast("Copied to clipboard!");
+            }
+    
+            function showToast(message) {
+                const toastElement = document.createElement("div");
+                toastElement.innerText = message;
+                toastElement.style.backgroundColor = "#333";
+                toastElement.style.color = "#fff";
+                toastElement.style.padding = "10px";
+                toastElement.style.position = "fixed";
+                toastElement.style.bottom = "30px";
+                toastElement.style.left = "50%";
+                toastElement.style.transform = "translateX(-50%)";
+                toastElement.style.borderRadius = "5px";
+                toastElement.style.zIndex = "999";
+                toastElement.style.fontFamily = "Verdana";
+                document.body.appendChild(toastElement);
+    
+                setTimeout(function () {
+                    document.body.removeChild(toastElement);
+                }, 3000); // Toast will disappear after 3 seconds
+            }
+        </script>
+        
     </body>
     
 </html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_new.css') }}">
+</head>
+
+<div class ="bg-blue bar text-white fixed_top" style = "height: 5vw">
+    <h1>Projects</h1>
+    <ul>
+        <li class = "bar_item_li">
+            <p><a class = "bar_item text-white" href="index.html">Home</a></p>
+        </li >
+        <li class = "bar_item_li">
+            <p><a class = "bar_item text-white" href="/about">About</a></p>
+        </li >
+        <li class = "bar_item_li">
+            <p><a class = "bar_item text-white" href="/portfolio">Projects</a></p>
+        </li>
+        <li class = "bar_item_li">
+            <p><a class = "bar_item text-white" href="/service">Service</a></p>
+        </li>
+        <li class = "bar_item_li">
+            <p><a class = "bar_item text-white" href="{{ url_for('static', filename='ethan-ortiz-resume.pdf') }}">Resume</a></p>
+        </li>
+    </ul>
+</div>
+<body class = "bg-grey text-white center">
+    <table style = "padding: 2%;">
+        <tr>
+            <td style="width: 55vw;">
+                <a href = "/login"><img src="{{ url_for('static', filename='pictures/portfolio_spotify.PNG') }}" alt="Portrait" width="100%" height="auto"></a>
+            </td>
+            <td style="width: 2%;" class = "no_box-shadow">
+
+            </td>
+            <td class="bg-black text-white" style="width: 45vw;">
+                <h1 >
+                    <a class = "text-white bar_item" href = "/login">Stats for Spotify</a>
+                </h1>
+                <p style = "padding: 4%;">
+                    I created this website using Azure Cloud Services, a Python Flask server, and the Spotify API. On this website, the Python server, which is running on Azure cloud, accesses Spotify's API in order to show the user their top songs in a given time period. 
+                </p>
+            </td>
+        </tr>
+    </table>
+    <table style = "padding: 2%; padding-top: 0;">
+        <tr>
+            <td class="bg-black text-white" style="width: 45vw;">
+                <h1 >
+                    <a class = "text-white bar_item" href = "/wordle_solver">Wordle Solver</a>
+                </h1>
+                <p style = "padding: 4%;">
+                    I created this website using Azure Cloud Services, and a Python Flask server. On this website, the user is told what word to guess on Wordle. After inputting the word into whatever website they are playing in, the user reports which colors were given back onto my website. After sending a request to the server, a python script is run on the server which tells the user which word they should guess next. This process is repeated until the word is guessed correctly. In my testing the algorithm that I came up with solves the Wordle on average in 3.5 guesses.
+                </p>
+            </td>
+
+            
+            <td style="width: 2%;" class = "no_box-shadow">
+
+            </td>
+            
+            <td style="width: 55vw;">
+                <a  href = "/wordle_solver"><img src="{{ url_for('static', filename='pictures/portfolio_wordle.PNG') }}" alt="Portrait" width="100%" height="auto"></a>
+            </td>
+        </tr>
+    </table>
+    <table style = "padding: 2%; padding-top: 0;">
+        <tr>
+            <td style="width: 65vw;">
+                <img src="{{ url_for('static', filename='pictures/cashier.PNG') }}" alt="Portrait" width="100%" height="auto">
+            </td>
+
+            
+            <td style="width: 2%;" class = "no_box-shadow">
+
+            </td>
+            
+            <td class="bg-black text-white" style="width: 35vw;">
+                <h1 style = "padding-top: 10px;">
+                    <a class = "text-white bar_item" href = "https://piadapos.azurewebsites.net/menu_location/">Point of Sale System</a>
+                </h1>
+                <p style = "padding: 4%;">
+                    I created this website using Azure Cloud Services, and a Python Django server. I worked as a full stack developer in a team of 5 people using the Agile method to develop a mock POS system for Piada. In this I was responsible for creating CRUD operations for our database. This included menu items, ingredients, users, and orders. Through this I learned not only how to use Django and PostgreSQL but also how to work in a team using the Agile and Scrum methods. This also included the ability for users to place mobile orders with the menu populated from our database. It allows for control of the menu with creation, deletion, and editing of menu items for managers. The websites also allows for the creation of admin users which can create, view, elevate, and delete user accounts. This allows for users to be created the same for staff and customers with the admin being able to elevate a user to staff, manager, or admin. We also impletemented several API's including google oauth and google translate.
+                </p>
+            </td>
+        </tr>
+    </table>
+    <table style = "padding: 2%; padding-top: 0;">
+        <tr>
+            <td style="height: 20vh;">
+                <img src="{{ url_for('static', filename='pictures/alerts.PNG') }}" alt="Portrait" width="100%" height="auto">
+            </td>
+        </tr>
+    </table>
+    <table style = "padding: 2%; padding-top: 0;">
+        <tr>
+            <td style="height: 20vh;">
+                <img src="{{ url_for('static', filename='pictures/item.PNG') }}" alt="Portrait" width="100%" height="auto">
+            </td>
+        </tr>
+    </table>
+    <table style = "padding: 2%; padding-top: 0;">
+        <tr>
+            <td style="height: 20vh;">
+                <img src="{{ url_for('static', filename='pictures/sales.PNG') }}" alt="Portrait" width="100%" height="auto">
+            </td>
+        </tr>
+    </table>
+    <table style = "padding: 2%; padding-top: 0;">
+        <tr>
+            <td style="height: 20vh;">
+                <img src="{{ url_for('static', filename='pictures/menu.PNG') }}" alt="Portrait" width="100%" height="auto">
+            </td>
+        </tr>
+    </table>
+</body>
+
+<div class ="bg-black bar center" style = "height: 12vw; ">
+    <div> 
+        <h4>Contact</h4>
+        <p>Email: <a class="bar_item text-white" onclick="copyEmailToClipboard()">ethan@loszitros.com</a></p>
+        <p>Phone: <a class="bar_item text-white" onclick="copyPhoneToClipboard()">(512) 923-3309</a></p>
+    </div>
+    <div> 
+        <p>
+            <a href="https://www.linkedin.com/in/ethan-ortiz-0b3aa5249" title="ethan-ortiz-0b3aa5249">
+            <img src="{{ url_for('static', filename='linkedin_logo.png') }}" alt="LinkedIn Logo" class = "logo"></a>
+            <a href="https://www.instagram.com/e.as.in.edward/" title="e.as.in.edward">
+            <img src="{{ url_for('static', filename='instagram_logo.png') }}" alt="Instagram Logo" class = "logo"></a>
+            <a href="https://github.com/ethanortiz25?tab=repositories" title="ethanortiz25">
+            <img src="{{ url_for('static', filename='github_logo.png') }}" alt="Github Logo" class = "logo"></a>
+        </p>
+    </div>
+</div>
+
+<script>
+    function copyEmailToClipboard() {
+        const emailText = "ethan@loszitros.com";
+        const tempElement = document.createElement('textarea');
+        tempElement.value = emailText;
+        document.body.appendChild(tempElement);
+        tempElement.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempElement);
+        
+        showToast("Copied to clipboard!");
+    }
+    function copyPhoneToClipboard() {
+        const emailText = "5129233309";
+        const tempElement = document.createElement('textarea');
+        tempElement.value = emailText;
+        document.body.appendChild(tempElement);
+        tempElement.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempElement);
+        
+        showToast("Copied to clipboard!");
+    }
+
+    function showToast(message) {
+        const toastElement = document.createElement("div");
+        toastElement.innerText = message;
+        toastElement.style.backgroundColor = "#252525";
+        toastElement.style.color = "#fff";
+        toastElement.style.padding = "10px";
+        toastElement.style.position = "fixed";
+        toastElement.style.bottom = "30px";
+        toastElement.style.left = "50%";
+        toastElement.style.transform = "translateX(-50%)";
+        toastElement.style.borderRadius = "5px";
+        toastElement.style.zIndex = "999";
+        toastElement.style.fontFamily = "Verdana";
+        document.body.appendChild(toastElement);
+
+        setTimeout(function () {
+            document.body.removeChild(toastElement);
+        }, 3000); 
+    }
+</script>
+</html>

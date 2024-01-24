@@ -11,10 +11,17 @@
                 <button class="btn-switch" data-group-id="data-group-1" onclick="updateText(0)">this month</button>
                 <button class="btn-switch" data-group-id="data-group-2" onclick="updateText(1)">last 6 months</button>
                 <button class="btn-switch" data-group-id="data-group-3" onclick="updateText(2)">all time</button>
+                <button class="btn-switch" data-group-id="data-group-4" onclick="updateText(3)">recent</button>
+                <button alt="Information" id="infoButton">remove access</button>
             </div>
             <hr>
             <table><tr><td><h1><div id="term_text">top songs this month:</div></h1></td></tr></table>
             <hr>
+            <div class="info-box" id="infoBox">
+                <h2>Instructions on how to remove access</h2>
+                <p>In order to remove this website's access to your spotify information, go to <a href="https://www.spotify.com/us/account/apps/" title="remove access">this link</a> and remove access to the service titled "top songs".</p>
+                <button id="closeButton">Close</button>
+            </div>
             <ul>
                 <table class="data-group active" id="data-group-1">
                 {% for song in top_songs_short %}
@@ -27,14 +34,16 @@
                                 <td class="secondary_text">
                                     by {{ song.artists }}
                                 </td>
-                                <td class="album_text">
-                                    {{ song.album_name }}
-                                </td>
-                                <td class="song_length">
-                                    {{ song.song_length }}
-                                </td>
                             </tr>
                         </table>
+                    </td>
+                    <td class="album_text">
+                        {{ song.album_name }}
+                    </td>
+                    <td class="song_length">
+                        {{ song.song_length }}
+                        <a href={{ song.song_url  }} title={{ song.name  }}>
+                            <img src="{{ url_for('static', filename='spotify_logo.png') }}" alt="Spotify" class = "spotify_img"></a>
                     </td>
                 </tr>
                 {% endfor %}
@@ -52,14 +61,16 @@
                                     <td class="secondary_text">
                                         by {{ song.artists }}
                                     </td>
-                                    <td class="album_text">
-                                        {{ song.album_name }}
-                                    </td>
-                                    <td class="song_length">
-                                        {{ song.song_length }}
-                                    </td>
                                 </tr>
                             </table>
+                        </td>
+                        <td class="album_text">
+                            {{ song.album_name }}
+                        </td>
+                        <td class="song_length">
+                            {{ song.song_length }}
+                            <a href={{ song.song_url  }} title={{ song.name  }}>
+                                <img src="{{ url_for('static', filename='spotify_logo.png') }}" alt="Spotify" class = "spotify_img"></a>
                         </td>
                     </tr>
                     {% endfor %}
@@ -77,14 +88,42 @@
                                     <td class="secondary_text">
                                         by {{ song.artists }}
                                     </td>
-                                    <td class="album_text">
-                                        {{ song.album_name }}
-                                    </td>
-                                    <td class="song_length">
-                                        {{ song.song_length }}
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="album_text">
+                            {{ song.album_name }}
+                        </td>
+                        <td class="song_length">
+                            {{ song.song_length }}
+                            <a href={{ song.song_url  }} title={{ song.name  }}>
+                                <img src="{{ url_for('static', filename='spotify_logo.png') }}" alt="Spotify" class = "spotify_img"></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+                <table class="data-group" id="data-group-4">
+                    {% for song in top_songs_recent %}
+                    <tr>
+                        <td class = "time_played">{{ song.time_played  }}</td><td>  <img src="{{ song.artwork }}" alt="Album Artwork" width="100" height="100"></td>
+                        <td class = "fill">
+                            <table class="borderlesss_table">
+                                <tr><td>{{ song.name }}</td></tr>
+                                <tr>
+                                    <td class="secondary_text">
+                                        by {{ song.artists }}
                                     </td>
                                 </tr>
                             </table>
+                        </td>
+                        <td class="album_text">
+                            {{ song.album_name }}
+                        </td>
+                        <td class="song_length">
+                            {{ song.song_length }}
+                            <a href={{ song.song_url  }} title={{ song.name  }}>
+                                <img src="{{ url_for('static', filename='spotify_logo.png') }}" alt="Spotify" class = "spotify_img"></a>
                         </td>
                     </tr>
                     {% endfor %}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Service</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_new.css') }}">
+</head>
+
+<div class ="bg-blue bar text-white fixed_top" style = "height: 5vw">
+    <h1>Service</h1>
+    <ul>
+        <li class = "bar_item_li">
+            <p><a class = "bar_item text-white" href="index.html">Home</a></p>
+        </li >
+        <li class = "bar_item_li">
+            <p><a class = "bar_item text-white" href="/about">About</a></p>
+        </li >
+        <li class = "bar_item_li">
+            <p><a class = "bar_item text-white" href="/portfolio">Projects</a></p>
+        </li>
+        <li class = "bar_item_li">
+            <p><a class = "bar_item text-white" href="/service">Service</a></p>
+        </li>
+        <li class = "bar_item_li">
+            <p><a class = "bar_item text-white" href="{{ url_for('static', filename='ethan-ortiz-resume.pdf') }}">Resume</a></p>
+        </li>
+    </ul>
+</div>
+
+<body class = "bg-grey text-white center">
+    <table class = "bar" style = "padding: 2%;">
+        <tr>
+            <td style="width: 40vw;">
+                <img src="{{ url_for('static', filename='pictures/eagleproject_06.jpeg') }}" alt="Portrait" width="100%" height="auto">
+            </td>
+            <td style="width: 2%;" class = "no_box-shadow">
+
+            </td>
+            <td class="bg-black text-white" style="width: 60vw;">
+                <h1>Eagle Scout Project</h1>
+                <p style ="padding: 4%;">
+                    As a member of Boy Scouts of America, I dedicated hundreds of hours of service in order to advance to the rank of Eagle Scout. This included planning and executing my Eagle Project which took over 2 years of planning and approvals. On the day of execution, I lead more than 30 volunteers to complete the project over the course of over 200 man hours. The site of the project was a local elementary school. We built several components that the kids would go on to use as an outdoor garden classroom in order to learn about the growth of plants as well as other related subjects. In total we moved 4+ cubic yards of soil and mulch for the path and garden boxes, constructed seven 8ftx3ft planter boxes, made one teepee for tomato growth, secured one bench to the ground with concrete, and dug out the space for an 80 ft path. I take great pride in knowing that my eagle scout project affected the lives of many people in my community. I selected the elementary school due to it being placed in a lower income area, hopefully increasing the impact on those students learning. During this project, not only did I give back to my community, but I also learned valuable lessons in both leadership and project management. I had to manage a large group of people and guide them through a rigorous and complex task. This was challenging, and took a large amount of planning. I was lucky enough to have great advisors in my troop to guide and teach me so that on the day of execution my project would go smoothly. By effectively communicating and organizing the volunteers, I was able to avoid us going off of the plan as much as possible. Overall, becoming an eagle scout and completing my eagle scout project was my greatest accomplishment and something that taught me skills that I am sure I will use for the rest of my life.
+                </p>
+            </td>
+        </tr>
+    </table>
+    <table style = "padding: 2%; padding-top: 0;">
+        <tr style="margin-top: 3%;">
+            <td class="bg-black text-white" style="width: 30vw;">
+                <h1 style = "padding: 4%;">Specifications</h1>
+                <ul >
+                    <li>
+                        <p>7x Planter Boxes (8ft x 3ft)</p>
+                    </li>
+                    <li>
+                        <p>80ft mulch path</p>
+                    </li>
+                    <li>
+                        <p>12x paver stones</p>
+                    </li>
+                    <li>
+                        <p>1x Tomato Teepee</p>
+                    </li>
+                    <li>
+                        <p>1x Bench</p>
+                    </li>
+                    <li>
+                        <p>30+ volunteers</p>
+                    </li>
+                    <li>
+                        <p>200+ man hours</p>
+                    </li>
+                    <li>
+                        <p>2 years of planning</p>
+                    </li>
+                </ul>
+                
+            </td>
+            <td style="width: 2%;" class = "no_box-shadow">
+
+            </td>
+            <td style="width: 70vw;">
+                <img src="{{ url_for('static', filename='pictures/eagleproject_03.jpeg') }}" alt="Portrait" width="100%" height="auto">
+            </td>
+        </tr>
+    </table>
+    
+    <table style = "padding: 2%; padding-top: 0;">
+        <tr style="margin-top: 3%;">
+            <td style="width: 50vw;">
+                <img src="{{ url_for('static', filename='pictures/eagleproject_04.jpeg') }}" alt="Portrait" width="100%" height="auto">
+            </td>
+            <td style="width: 2%;" class = "no_box-shadow">
+
+            </td>
+            <td style="width: 50vw;">
+                <img src="{{ url_for('static', filename='pictures/eagleproject_05.jpeg') }}" alt="Portrait" width="100%" height="auto">
+            </td>
+        </tr>
+    </table>
+</body>
+
+<div class ="bg-black bar center" style = "height: 12vw; ">
+    <div> 
+        <h4>Contact</h4>
+        <p>Email: <a class="bar_item text-white" onclick="copyEmailToClipboard()">ethan@loszitros.com</a></p>
+        <p>Phone: <a class="bar_item text-white" onclick="copyPhoneToClipboard()">(512) 923-3309</a></p>
+    </div>
+    <div> 
+        <p>
+            <a href="https://www.linkedin.com/in/ethan-ortiz-0b3aa5249" title="ethan-ortiz-0b3aa5249">
+            <img src="{{ url_for('static', filename='linkedin_logo.png') }}" alt="LinkedIn Logo" class = "logo"></a>
+            <a href="https://www.instagram.com/e.as.in.edward/" title="e.as.in.edward">
+            <img src="{{ url_for('static', filename='instagram_logo.png') }}" alt="Instagram Logo" class = "logo"></a>
+            <a href="https://github.com/ethanortiz25?tab=repositories" title="ethanortiz25">
+            <img src="{{ url_for('static', filename='github_logo.png') }}" alt="Github Logo" class = "logo"></a>
+        </p>
+    </div>
+</div>
+
+<script>
+    function copyEmailToClipboard() {
+        const emailText = "ethan@loszitros.com";
+        const tempElement = document.createElement('textarea');
+        tempElement.value = emailText;
+        document.body.appendChild(tempElement);
+        tempElement.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempElement);
+        
+        showToast("Copied to clipboard!");
+    }
+    function copyPhoneToClipboard() {
+        const emailText = "5129233309";
+        const tempElement = document.createElement('textarea');
+        tempElement.value = emailText;
+        document.body.appendChild(tempElement);
+        tempElement.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempElement);
+        
+        showToast("Copied to clipboard!");
+    }
+
+    function showToast(message) {
+        const toastElement = document.createElement("div");
+        toastElement.innerText = message;
+        toastElement.style.backgroundColor = "#252525";
+        toastElement.style.color = "#fff";
+        toastElement.style.padding = "10px";
+        toastElement.style.position = "fixed";
+        toastElement.style.bottom = "30px";
+        toastElement.style.left = "50%";
+        toastElement.style.transform = "translateX(-50%)";
+        toastElement.style.borderRadius = "5px";
+        toastElement.style.zIndex = "999";
+        toastElement.style.fontFamily = "Verdana";
+        document.body.appendChild(toastElement);
+
+        setTimeout(function () {
+            document.body.removeChild(toastElement);
+        }, 3000); 
+    }
+</script>
+</html>

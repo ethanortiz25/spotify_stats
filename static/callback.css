@@ -1,22 +1,18 @@
 h1 {
     font-size: 75px;
+    font-family: Verdana;
     padding-left: 20px;
     padding-right: 20px;
     /* color: #303030;
-    border: 2px solid #303030;
+    order: 2px solid #303030;
     background-color: #ffffff; */
-}
-p {
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 24px;
-    font-family: Arial;
 }
 table {
     border: 2px solid #000000;
     background-color: #252525;
     color: white;
     font-size: 28px;
+    font-family: Verdana;
 
 }
 body {
@@ -41,11 +37,11 @@ a {
 button {
     width: 200px; /* Set a fixed width for the buttons */
     height: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top:15px;
+    margin-bottom: 15px;
     background-color: #000000;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Verdana;
     font-size: 16px;
 }
 .data-group {
@@ -63,26 +59,48 @@ button {
     background-color: #252525;
     color: white;
     font-size: 24px;
+    font-family: Verdana;
     width: 100%;
 
 }
 .secondary_text {
     color: rgb(197, 226, 255);
     font-size: 16px;
+    font-family: Verdana;
     text-align: left;
-    width: 600px;
+    width: 50%;
+    vertical-align: middle;
 }
 .album_text {
     color: rgb(197, 226, 255);
     font-size: 16px;
-    display: block;
+    font-family: Verdana;
     text-align: left;
-    margin-right: 30px;
+    width: 30%;
+    vertical-align: middle;
 }
 .song_length {
     color: rgb(197, 226, 255);
     font-size: 16px;
+    font-family: Verdana;
     text-align: right;
+    vertical-align: middle;
+    width: 20%;
+}
+.spotify_img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    text-align: right;
+    border: none;
+}
+.time_played {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Verdana;
+    text-align: middle;
+    vertical-align: middle;
+    width: 5%;
 }
 tr {
     width: 100%;
@@ -92,5 +110,39 @@ td {
     height: 100%;
 }
 .fill{
-    width: 100%;
+    width: 45%;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    padding-inline-start: 0px;
+}
+.logo {
+    width: 50px; 
+    height: 50px; 
+    border: 0px;
+    
+    margin-right: 12px; 
+    vertical-align: middle;
+}
+.info-box {
+    display: none;
+    position: absolute;
+    font-family: Verdana;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #000000;
+    color: #ccc;
+}
+
+/* Style for the image button */
+#infoButton {
+    cursor: pointer;
 }

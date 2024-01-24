@@ -27,5 +27,21 @@ function updateText(buttonId) {
         textContainer.textContent = "top songs last 6 months:";
     } else if (buttonId === 2) {
         textContainer.textContent = "top songs of all time:";
+    } else if (buttonId === 3) {
+        textContainer.textContent = "recently listened:";
     }
 }
+
+const infoButton = document.getElementById('infoButton');
+const infoBox = document.getElementById('infoBox');
+const closeButton = document.getElementById('closeButton');
+
+// Show the information box when the image button is clicked
+infoButton.addEventListener('click', () => {
+    infoBox.style.display = 'block';
+});
+
+// Hide the information box when the close button is clicked
+closeButton.addEventListener('click', () => {
+    infoBox.style.display = 'none';
+});

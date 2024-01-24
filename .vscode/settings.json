@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8a87b87d-bc02-4898-8fcb-92e3f89dcdb7/resourceGroups/ethanortiz_group/providers/Microsoft.Web/sites/ethanortiz",
+    "appService.deploySubpath": "."
+}

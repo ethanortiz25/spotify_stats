@@ -1,0 +1,113 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease 0s;
+}
+li, a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.bg-black {
+    background-color: black;
+}
+.bg-white {
+    background-color: white;
+}
+.bg-grey {
+    background-color: rgb(47, 47, 47);
+}
+.bg-blue {
+    background-color: rgb(0, 141, 206);
+}
+.text-white {
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.text-blue {
+    color: rgb(113, 210, 255);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.text-black {
+    color: rgb(0, 0, 0);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.text-grey {
+    color: rgb(196, 229, 255);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.bar_item{
+    cursor: pointer;
+}
+.bar_item_li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+.bar_item:hover {
+    color: rgb(113, 210, 255);
+}
+
+
+.center{
+    text-align: center;
+    vertical-align: top;
+}
+.email {
+    cursor: pointer;
+}
+a {
+    color: rgb(113, 210, 255);
+}
+.logo {
+    border: 0px;
+    width: 4vw; 
+    height: 4vw; 
+    margin-left: 6px;
+    margin-right: 6px; 
+    vertical-align: middle;
+}
+.logo:hover {
+    width: 5vw; 
+    height: 5vw; 
+}
+h1 {
+    font-size: 2.7vw;
+}
+p {
+    font-size: 1.2vw;
+}
+.fixed_top {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1031;
+}
+h4 {
+    font-size: 1.8vw;
+}
+td {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.no_box-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+
+}
+img {
+    border-radius: 5px;
+
+}
