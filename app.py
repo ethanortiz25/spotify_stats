@@ -1,8 +1,8 @@
-from flask import Flask, request, render_template, redirect, jsonify
+from flask import Flask, request, render_template, redirect, jsonify, abort
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth, CacheFileHandler
 from datetime import datetime
-from wordleCalculator import getNextWord
+from wordleCalculator import treeTreversal, cache_storage, runAll
 
 app = Flask(__name__)
 # ip = "ethanortiz.azurewebsites.net"
@@ -38,8 +38,21 @@ def save_data():
     colors = data.get('colors', [])
     results = []
     for i in range(len(words)):
-        results.append((words[i], tuple(colors[i])))
-    nextWord = getNextWord(tuple(results))
+        results.append((words[i].lower(), tuple(colors[i])))
+    # print(results)
+    
+    
+    validGuessFile = open('wordle/validGuess.txt', 'r')
+    validAnswerFile = open('wordle/validAnswer.txt', 'r')
+    validGuess = tuple(validGuessFile.read().split('\n'))
+    validAnswer = validAnswerFile.read().split('\n')
+    validAnswerFile.close()
+    validGuessFile.close()
+
+    # cachedTreeTreversal = cache_storage('wordle/cache/tree')(treeTreversal)
+    nextWord = treeTreversal(results, validGuess, validAnswer)[0]
+    if nextWord == "":
+        return abort(500)
 
     processed_data = []
     for letter in nextWord:

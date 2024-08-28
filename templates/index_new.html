@@ -4,81 +4,80 @@
 <title>Ethan Ortiz</title>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_new.css') }}">
 </head>
-
-<div class ="bg-blue bar text-white fixed_top" style = "height: 5vw">
+<div class ="fixed_top">
     <h1>Ethan Ortiz</h1>
     <ul>
         <li class = "bar_item_li">
-            <p><a class = "bar_item text-white" href="index.html">Home</a></p>
+            <h4><a class = "bar_item" href="/">Home</a></h4>
         </li >
         <li class = "bar_item_li">
-            <p><a class = "bar_item text-white" href="/about">About</a></p>
+            <h4><a class = "bar_item" href="/about">About</a></h4>
         </li >
         <li class = "bar_item_li">
-            <p><a class = "bar_item text-white" href="/portfolio">Projects</a></p>
+            <h4><a class = "bar_item" href="/portfolio">Projects</a></h4>
         </li>
         <li class = "bar_item_li">
-            <p><a class = "bar_item text-white" href="/service">Service</a></p>
+            <h4><a class = "bar_item" href="/service">Service</a></h4>
         </li>
         <li class = "bar_item_li">
-            <p><a class = "bar_item text-white" href="{{ url_for('static', filename='ethan-ortiz-resume.pdf') }}">Resume</a></p>
+            <h4><a class = "bar_item" href="{{ url_for('static', filename='ethan-ortiz-resume.pdf') }}">Resume</a></p>
         </li>
     </ul>
 </div>
 
-<body class = "bg-grey text-white center">
-    <table style = "padding: 2%;">
+<body>
+    <table class = "top_table">
         <tr>
-            <td style="width: 60vw;">
+            <td id = "larger_side">
                 <img src="{{ url_for('static', filename='pictures/dune_4.JPG') }}" alt="Portrait" width="100%" height="auto">
             </td>
-            <td style="width: 2%;" class = "no_box-shadow">
+            <td  class = "td_spacer">
 
             </td>
-            <td class="bg-black text-white" style="width: 40vw;">
+            <td id="smaller_side">
                 <h1>
                     Bio
                 </h1>
-                <p style = "padding: 4%;">
-                    I am a Junior Computer Science student at Texas A&M University, originally from Austin, TX. I currently work an on campus job at the TAMU Help Desk which serves the entire TAMU system with technical support. I am very excited to dive deeper into my computer science curriculum as I begin taking more advanced classes this year. I am hoping I can further my education with something closer to an actual workplace environment by applying for an Internship next summer.
+                <p class = "td_text">
+                    I am a Senior Computer Science student at Texas A&M University, originally from Austin, TX. Over this past summer, I worked as a software engineering intern at Asana in San Francisco, CA. I worked as a full stack developer and refined my skills using languages such as Typescript/Javascript and Scala. I am familiar with several frontend and backend frameworks such as React, Ruby on Rails, Django, Flask, and GraphQL. I currently work an on campus job at the TAMU Help Desk as a Student Coordinator. I am looking for work as a frontend or full stack developer and I will be available to start in May of 2025 when I graduate. I am open to working anywhere in the US and I am willing to relocate.
                 </p>
             </td>
         </tr>
     </table>
-    <table style = "padding: 2%; padding-top: 0;">
-        <tr style="margin-top: 3%;">
-            <td class="bg-black text-white" style="width: 40vw;">
+    <table class = "sub_table">
+        <tr>
+            <td id = "smaller_side">
                 <h1>
                     Hobbies
                 </h1>
-                <p style ="padding: 4%;">
-                    Outside of my classes and work, I enjoy watching football, hiking, playing pickup basketball, going to the gym, and playing Valorant. I am Diamond 3 in Valorant, and I won both of my fantasy football leagues last year which is probably my crowning achievement from the last few months. I also really enjoy skiing and will take any opportunity to take a trip to Colorado and get a few days of skiing in.
+                <p class = "td_text">
+                    Outside of my classes and work, I enjoy watching football, hiking, playing pickup basketball, going to the gym, and playing <a href = "https://tracker.gg/valorant/profile/riot/MrRed%234132/overview">Valorant</a>. I am Diamond 3 in Valorant, and I won both of my fantasy football leagues last year which is probably my crowning achievement from the last few months. I also really enjoy skiing and will take any opportunity to take a trip to Colorado and get a few days of skiing in.
                 </p>
             </td>
-            <td style="width: 2%;" class = "no_box-shadow">
+            <td class = "td_spacer">
 
             </td>
-            <td style="width: 60vw;">
+            <td id="larger_side">
                 <img src="{{ url_for('static', filename='pictures/dune_landscape.JPG') }}" alt="Portrait" width="100%" height="auto">
             </td>
         </tr>
     </table>
 </body>
 
-<div class ="bg-black bar center" style = "height: 12vw; ">
+<div class ="low_bar">
     <div> 
         <h4>Contact</h4>
-        <p>Email: <a class="bar_item text-white" onclick="copyEmailToClipboard()">ethan@loszitros.com</a></p>
-        <p>Phone: <a class="bar_item text-white" onclick="copyPhoneToClipboard()">(512) 923-3309</a></p>
+        <p>Email: <a class="bar_item" onclick="copyEmailToClipboard()">ethan@loszitros.com</a></p>
+        <p>Phone: <a class="bar_item" onclick="copyPhoneToClipboard()">(512) 923-3309</a></p>
     </div>
     <div> 
         <p>
             <a href="https://www.linkedin.com/in/ethan-ortiz-0b3aa5249" title="ethan-ortiz-0b3aa5249">
-            <img src="{{ url_for('static', filename='linkedin_logo.png') }}" alt="LinkedIn Logo" class = "logo"></a>
+            <img src="{{ url_for('static', filename='/linkedin_logo.png') }}" alt="LinkedIn Logo" class = "logo"></a>
             <a href="https://www.instagram.com/e.as.in.edward/" title="e.as.in.edward">
-            <img src="{{ url_for('static', filename='instagram_logo.png') }}" alt="Instagram Logo" class = "logo"></a>
+            <img src="{{ url_for('static', filename='/instagram_logo.png') }}" alt="Instagram Logo" class = "logo"></a>
             <a href="https://github.com/ethanortiz25?tab=repositories" title="ethanortiz25">
-            <img src="{{ url_for('static', filename='github_logo.png') }}" alt="Github Logo" class = "logo"></a>
+            <img src="{{ url_for('static', filename='/github_logo.png') }}" alt="Github Logo" class = "logo"></a>
         </p>
     </div>
 </div>

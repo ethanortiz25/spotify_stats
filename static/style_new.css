@@ -1,60 +1,154 @@
 
-* {
+
+@media only screen and (orientation: landscape) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        transition: all 0.3s ease 0s;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    li, a {
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    .bar_item{
+        cursor: pointer;
+        color: white;
+    }
+    .bar_item_li {
+        display: inline-block;
+        padding: 0px 10px;
+    }
+    .bar_item:hover {
+        color: rgb(113, 210, 255);
+    }
+    
+    a {
+        color: rgb(113, 210, 255);
+    }
+    .logo {
+        border: 0px;
+        width: 4vw; 
+        height: 4vw; 
+        margin-left: 6px;
+        margin-right: 6px; 
+        vertical-align: middle;
+    }
+    .logo:hover {
+        width: 5vw; 
+        height: 5vw; 
+    }
+    h1 {
+        font-size: 48px;
+        padding: 4%;
+    }
+    p {
+        font-size: 24px;
+    }
+    .fixed_top {
+        position: sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1031;
+        height: 5vw;
+        color: white;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-left: 10%;
+        padding-right: 10%;
+        background-color: rgb(0, 141, 206);
+    }
+    h4 {
+        font-size: 32px;
+    }
+    td {
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: black;
+        color: white;
+    }
+    img {
+        border-radius: 5px;
+    }
+    .top_table {
+        padding: 2%;
+    }
+    .sub_table {
+        padding: 2%; 
+        padding-top: 0;
+    }
+    .td_text {
+        padding: 4%;
+    }
+    .td_spacer{
+        width: 2%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+        background-color: rgb(47, 47, 47);
+    }
+    body {
+        background-color: rgb(47, 47, 47);
+        color: white;
+        text-align: center;
+        vertical-align: top;
+    }
+    .low_bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-left: 10%;
+        padding-right: 10%;
+    
+        background-color: black;
+        text-align: center;
+        vertical-align: top;
+        height: 12vw;
+    }
+    #larger_side {
+        width: 60vw;
+    }
+    #smaller_side {
+        width: 40vw;
+    }
+    #equal_side {
+        width: 50vw;
+    }
+    #narrow_side {
+        width: 30vw;
+    }
+    #wide_side {
+        width: 70vw;
+    }
+}
+@media only screen and (orientation: portrait) {* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     transition: all 0.3s ease 0s;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 li, a {
     text-decoration: none;
     list-style: none;
 }
 
-.bg-black {
-    background-color: black;
-}
-.bg-white {
-    background-color: white;
-}
-.bg-grey {
-    background-color: rgb(47, 47, 47);
-}
-.bg-blue {
-    background-color: rgb(0, 141, 206);
-}
-.text-white {
-    color: white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-.text-blue {
-    color: rgb(113, 210, 255);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-.text-black {
-    color: rgb(0, 0, 0);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-.text-grey {
-    color: rgb(196, 229, 255);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-.bar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
 .bar_item{
+    font-size: 32px;
     cursor: pointer;
+    color: white;
 }
 .bar_item_li {
     display: inline-block;
-    padding: 0px 10px;
+    padding: 4%;
 }
 .bar_item:hover {
     color: rgb(113, 210, 255);
@@ -65,29 +159,29 @@ li, a {
     text-align: center;
     vertical-align: top;
 }
-.email {
-    cursor: pointer;
-}
 a {
     color: rgb(113, 210, 255);
 }
 .logo {
     border: 0px;
-    width: 4vw; 
-    height: 4vw; 
+    width: 8vw; 
+    height: 8vw; 
     margin-left: 6px;
     margin-right: 6px; 
     vertical-align: middle;
+    border-radius: 0px;
+    border-radius: 5px;
 }
 .logo:hover {
     width: 5vw; 
     height: 5vw; 
 }
 h1 {
-    font-size: 2.7vw;
+    font-size: 64px;
+    padding: 4%;
 }
 p {
-    font-size: 1.2vw;
+    font-size: 48px;
 }
 .fixed_top {
     position: sticky;
@@ -95,19 +189,73 @@ p {
     right: 0;
     left: 0;
     z-index: 1031;
+    height: 25vw;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: rgb(0, 141, 206);
 }
 h4 {
-    font-size: 1.8vw;
+    font-size: 32px;
 }
 td {
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: rgb(0, 141, 206);
+    color: white;
+    display: block;
+    padding: 4%;
 }
-.no_box-shadow {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+.top_table {
+    padding: 2%;
+}
+.sub_table {
+    padding: 2%; 
+    padding-top: 0;
+}
+.td_text {
+    padding-bottom: 4%;
+}
+body {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    text-align: center;
+    vertical-align: top;
+}
+.low_bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
 
+    background-color: black;
+    text-align: center;
+    vertical-align: top;
+    height: 25vw;
 }
+.td_spacer {
+    padding: 0;
+    margin: 0;
+    height: 0;
+}
+tr {
+    display: block;
+    margin-bottom: 10px;
+}
+table {
+    display: block;
+    width: 100%;
+}
+
 img {
-    border-radius: 5px;
-
+    border-radius: 15px;
+}
 }

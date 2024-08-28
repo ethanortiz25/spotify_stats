@@ -1,0 +1,6 @@
+
+
+
+Total Time: 28.315019607543945
+Average Guesses: 3.422462203023758
+Average Time: 0.012231109981660451

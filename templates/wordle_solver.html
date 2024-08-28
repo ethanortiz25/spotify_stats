@@ -1,45 +1,50 @@
 <!doctype html>
 <html>
     
-    <head>
-        <title>Wordle Solver</title>
-        <meta name="description" content="Wordle Solver">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='wordle_solver.css') }}">
-    </head>
-    <body id="grad">
-        <center>
-            <table><tr><td><h1>Wordle Solver</h1></td></tr></table>
-            <hr>
-            <img src="{{ url_for('static', filename='information.png') }}" alt="Information" id="infoButton" class = "logo">
+<head>
+    <title>Wordle Solver</title>
+    <meta name="description" content="Wordle Solver">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_new.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='wordle_solver.css') }}">
+</head>
+<body class="bg-grey">
+    <div class ="bg-blue bar text-white fixed_top">
+        <h1>Wordle Solver</h1>
+    </div>
+    <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+        <div style = "display: flex; justify-content: space-between; align-items: center;">
+            <button id="infoButton" class = "empty-btn"><img src="{{ url_for('static', filename='information.png') }}" alt="Information" class = "logo"></button>
             <button class="btn-switch" id="submitButton">Submit</button>
-            <a href="/wordle_solver" title="Clear Board">
+            <a href="/wordle_solver" title="Clear Board" class = "empty-btn">
                 <img src="{{ url_for('static', filename='refresh_button.png') }}" alt="Refresh Button" class = "logo">
             </a>
-            <div class="info-box" id="infoBox">
-                <h2>Instructions</h2>
-                <p>This site is used to help you solve wordle. Start by entering the word that is shown to the site you are playing wordle on. Next click on the letters to make the colors match the output given by your wordle game. Click submit and you will get the best guess after some time. You can repeat this process until you have the correct word.</p>
-                <button id="closeButton">Close</button>
-            </div>
-            <table>
-                <tr>
-                    <td class = "letter_area">
-                        
-                    </td>
-                    <td class = "letter_area">
-                        
-                    </td>
-                    <td class = "letter_area">
-                        
-                    </td>
-                    <td class = "letter_area">
-                        
-                    </td>
-                    <td class = "letter_area">
-                        
-                    </td>
-                </tr>
-            </table>
-    </body>
-    <script src="{{ url_for('static', filename='wordle_solver.js') }}"></script>
+        </div>
+        <div class="info-box" id="infoBox">
+            <h2>Instructions</h2>
+            <p>This site is used to help you solve wordle. Start by entering the word that is shown to the site you are playing wordle on. Next click on the letters to make the colors match the output given by your wordle game. Click submit and you will get the best guess after some time. You can repeat this process until you have the correct word.</p>
+            <button id="closeButton">Close</button>
+        </div>
+        <table style="width: fit-content;">
+            <tr>
+                <td class = "letter_area">
+                    
+                </td>
+                <td class = "letter_area">
+                    
+                </td>
+                <td class = "letter_area">
+                    
+                </td>
+                <td class = "letter_area">
+                    
+                </td>
+                <td class = "letter_area">
+                    
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="{{ url_for('static', filename='wordle_solver.js') }}"></script>
     
 </html>

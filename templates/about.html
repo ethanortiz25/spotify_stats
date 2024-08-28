@@ -5,73 +5,108 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_new.css') }}">
 </head>
 
-
-<div class ="bg-blue bar text-white fixed_top" style = "height: 5vw">
+<div class ="fixed_top">
     <h1>About Me</h1>
     <ul>
         <li class = "bar_item_li">
-            <p><a class = "bar_item text-white" href="index.html">Home</a></p>
+            <h4><a class = "bar_item" href="/">Home</a></h4>
         </li >
         <li class = "bar_item_li">
-            <p><a class = "bar_item text-white" href="/about">About</a></p>
+            <h4><a class = "bar_item" href="/about">About</a></h4>
         </li >
         <li class = "bar_item_li">
-            <p><a class = "bar_item text-white" href="/portfolio">Projects</a></p>
+            <h4><a class = "bar_item" href="/portfolio">Projects</a></h4>
         </li>
         <li class = "bar_item_li">
-            <p><a class = "bar_item text-white" href="/service">Service</a></p>
+            <h4><a class = "bar_item" href="/service">Service</a></h4>
         </li>
         <li class = "bar_item_li">
-            <p><a class = "bar_item text-white" href="{{ url_for('static', filename='ethan-ortiz-resume.pdf') }}">Resume</a></p>
+            <h4><a class = "bar_item" href="{{ url_for('static', filename='ethan-ortiz-resume.pdf') }}">Resume</a></p>
         </li>
     </ul>
 </div>
 
-<body class = "bg-grey text-white center">
-    
-    <table style = "padding: 2%;">
-        <tr style="margin-top: 3%;">
-            <td class="bg-black text-white" style="padding: 4%; width: 60vw;">
+<body>
+    <table class = "top_table">
+        <tr>
+            <td id = "larger_side">
                 
-                <h1 style = "padding: 4%;">
+                <h1>
                     Education
                 </h1>
                 <p>
-                    GPA: 3.93
+                    Texas A&M University - College Station, TX
                 </p>
-                <p >
+                <p>
+                    GPA: 3.84
+                </p>
+                <p>
                     College of Engineering - B.S.  in  Computer Science, Minor in Mathematics 
                 </p>
-                <h1 style = "padding: 4%;">Coursework</h1>
-                <p>
-                    Data Structures and Algorithms, Discrete Structures, Computer Architecture, Programming Languages, Program Design, Computer Systems, Linear Algebra, Differential Equations
+                <h1>Coursework</h1>
+                <p class = "td_text">
+                    Data Structures and Algorithms, Discrete Structures, Computer Architecture, Programming Languages, Program Design, Computer Systems, Software Engineering, Algorithms, Human-Computer Interaction, Artificial Intelligence, Database Systems, Linear Algebra, Differential Equations, Fourier Series and Wavelets, Cryptography
                 </p>
             </td>
-            <td style="width: 2%;" class = "no_box-shadow">
+            <td class = "td_spacer">
 
             </td>
-            <td style="width: 40vw;">
+            <td id = "smaller_side">
                 <img src="{{ url_for('static', filename='pictures/ethan-france.png') }}" alt="Portrait" width="100%" height="auto">
             </td>
         </tr>
     </table>
-    <table style = "padding: 2%; ; padding-top: 0;">
+    <table class = "top_table">
         <tr>
-            <td style="width: 40vw;">
-                <img src="{{ url_for('static', filename='pictures/ethan-hiking.png') }}" alt="Portrait" width="100%" height="auto">
+            <td id = "smaller_side">
+                <img src="{{ url_for('static', filename='pictures/yosemite.jpg') }}" alt="Portrait" width="100%" height="auto">
             </td>
-            <td style="width: 2%;" class = "no_box-shadow">
+            <td class = "td_spacer">
 
             </td>
-            <td class="bg-black text-white" style = "padding: 4%; width: 60vw;">
+            <td id = "larger_side">
                 
-                <h1 style = "padding: 4%;">Skills</h1>
+                <h1>
+                    Work Experience
+                </h1>
+                <p>
+                    Asana - San Francisco, CA
+                </p>
+                <p>
+                    Software Engineering Intern
+                </p>
+                <p>
+                    May 2024 - August 2024
+                </p>
                 <ul>
-                    <li class = "text-white">
+                    <li><p>Worked alongside a team of full time employees</p></li>
+                    <li><p>Shipped features used by thousands of customers</p></li>
+                    <li><p>Used Typescript/React and GraphQL for frontend development</p></li>
+                    <li><p>Used Typescript and Scala for backend development</p></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table class="sub_table">
+        <tr>
+            <td id = "smaller_side">
+                <img src="{{ url_for('static', filename='pictures/ethan-hiking.png') }}" alt="Portrait" width="100%" height="auto">
+            </td>
+            <td class = "td_spacer">
+
+            </td>
+            <td id = "larger_side">
+                
+                <h1>Skills</h1>
+                <ul>
+                    <li>
                         <p>Java, C++, Python</p>
                     </li>
                     <li>
                         <p>HTML, CSS, Javascript</p>
+                    </li>
+                    <li>
+                        <p>Typescript, React, Scala</p>
                     </li>
                     <li>
                         <p>C#, SQL, Haskell</p>
@@ -85,16 +120,15 @@
                     <li>
                         <p>Azure Cloud Services</p>
                     </li>
-                    <p></p>
                 </ul>
             </td>
         </tr>
     </table>
-    <table style = "padding: 2%; padding-top: 0;">
-        <tr style="margin-top: 3%;">
-            <td class="bg-black text-white" style="padding: 4%; width: 60vw;">
+    <table class = "sub_table">
+        <tr>
+            <td id = "larger_side">
                 
-                <h1 style = "padding: 4%;">Awards</h1>
+                <h1>Awards</h1>
                 <ul>
                     <li><p>
                         Eagle Scout
@@ -116,21 +150,21 @@
                     </p></li>
                 </ul>
             </td>
-            <td style="width: 2%;" class = "no_box-shadow">
+            <td class = "td_spacer">
 
             </td>
-            <td style="width: 40vw;">
+            <td id = "smaller_side">
                 <img src="{{ url_for('static', filename='pictures/mountain.JPG') }}" alt="Portrait" width="100%" height="auto">
             </td>
         </tr>
     </table>
 </body>
 
-<div class ="bg-black bar center" style = "height: 12vw; ">
+<div class ="low_bar">
     <div> 
         <h4>Contact</h4>
-        <p>Email: <a class="bar_item text-white" onclick="copyEmailToClipboard()">ethan@loszitros.com</a></p>
-        <p>Phone: <a class="bar_item text-white" onclick="copyPhoneToClipboard()">(512) 923-3309</a></p>
+        <p>Email: <a class="bar_item" onclick="copyEmailToClipboard()">ethan@loszitros.com</a></p>
+        <p>Phone: <a class="bar_item" onclick="copyPhoneToClipboard()">(512) 923-3309</a></p>
     </div>
     <div> 
         <p>
@@ -138,7 +172,7 @@
             <img src="{{ url_for('static', filename='linkedin_logo.png') }}" alt="LinkedIn Logo" class = "logo"></a>
             <a href="https://www.instagram.com/e.as.in.edward/" title="e.as.in.edward">
             <img src="{{ url_for('static', filename='instagram_logo.png') }}" alt="Instagram Logo" class = "logo"></a>
-            <a href="https://github.com/ethanortiz25?tab=repositories" title="ethanortiz25">
+            <a href="https://github.com/ethanortiz-tamu?tab=repositories" title="ethanortiz-tamu">
             <img src="{{ url_for('static', filename='github_logo.png') }}" alt="Github Logo" class = "logo"></a>
         </p>
     </div>

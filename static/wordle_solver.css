@@ -1,26 +1,9 @@
-h1 {
-    font-size: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: Verdana;
-    /* color: #303030;
-    border: 2px solid #303030;
-    background-color: #ffffff; */
-}
-p {
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 16px;
-    font-family: Arial;
-}
 table {
     border: 2px solid #000000;
     background-color: #000000;
     color: white;
-
-}
-body {
-    background-color: #ff8d85;
+    display: flex;
+    flex-direction: row;
 }
 hr {
     height: 1px;
@@ -48,16 +31,22 @@ td {
     
     border: 2px solid #000000;
     background-color: #252525;
+    display: table-cell;
+    padding: 0;
 }
 .logo {
     width: 40px; 
     height: 40px; 
     margin-right: 12px; 
     margin-left: 12px; 
-    margin-top:15px;
-    margin-bottom: 15px;
+    margin-top:12px;
+    margin-bottom: 12px;
     vertical-align: middle;
     border: 0px;
+}
+.logo:hover {
+    width: 40px; 
+    height: 40px;
 }
 .letter_area {
     width: 50px; 
@@ -78,14 +67,12 @@ td {
     font-weight: bold;
 }
 button {
-    width: 200px; /* Set a fixed width for the buttons */
+    width: 150px; /* Set a fixed width for the buttons */
     height: 40px;
-    margin-top:15px;
-    margin-bottom: 15px;
     background-color: #000000;
     color: white;
     font-family: Verdana;
-    font-size: 16px;
+    font-size: 28px;
 }
 .info-box {
     display: none;
@@ -98,9 +85,88 @@ button {
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
+    color: black;
+    display: none; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
 }
 
 /* Style for the image button */
 #infoButton {
     cursor: pointer;
+}
+.empty-btn {
+    background: transparent;
+    border: none !important;
+    font-size:0;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+table {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: table;
+}
+tr{
+    margin: 0;
+    display: table-row;
+}
+.fixed_top {
+    justify-content: space-around;
+}
+h1 {
+    padding: 0;
+}
+@media only screen and (orientation: portrait) {
+    .letter_area {
+        width: 150px; 
+        height: 150px;
+        font-size: 100px;
+    }
+    .letter_area_inactive {
+        width: 150px; 
+        height: 150px; 
+        font-size: 100px;
+    }
+    button {
+        width: 450px; /* Set a fixed width for the buttons */
+        height: 150px;
+        background-color: #000000;
+        color: white;
+        font-family: Verdana;
+        font-size: 80px;
+        margin: 1%
+    }
+    .logo {
+        
+        width: 140px; 
+        height: 140px; 
+        margin-right: 12px; 
+        margin-left: 12px; 
+        margin-top:12px;
+        margin-bottom: 12px;
+        vertical-align: middle;
+        border: 0px;
+    }
+    .logo:hover {
+        width: 140px; 
+        height: 140px; 
+        margin-right: 12px; 
+        margin-left: 12px; 
+        margin-top:12px;
+        margin-bottom: 12px;
+        vertical-align: middle;
+        border: 0px;
+
+    }
+    .info-box {
+        
+        width: 700px;
+    }
+    h2{
+        font-size: 80px;
+    }
 }
