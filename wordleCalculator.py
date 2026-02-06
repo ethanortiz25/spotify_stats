@@ -471,11 +471,12 @@ def startTreeTreversal():
 # cached_my_function = cache_function_output(storage_path="/test")(getNextWord)
 # cached_my_function.remove_cache((('trace', (0, 0, 2, 1, 0)), ('cable', (2, 1, 0, 1, 0))))
 
-# validGuessFile = open('wordle/validGuess.txt', 'r')
-# validAnswerFile = open('wordle/validAnswer.txt', 'r')
-# validGuess = tuple(validGuessFile.read().split('\n'))
-# validAnswer = validAnswerFile.read().split('\n')
-# validAnswerFile.close()
-# validGuessFile.close()
-
-# print(treeTreversal([('SALET', (0, 0, 0, 0, 0))], validGuess, validAnswer))
+if __name__ == "__main__":
+    validGuessFile = open('wordle/validGuess.txt', 'r')
+    validAnswerFile = open('wordle/validAnswer.txt', 'r')
+    validGuess = tuple(validGuessFile.read().split('\n'))
+    validAnswer = validAnswerFile.read().split('\n')
+    validAnswerFile.close()
+    validGuessFile.close()
+    
+    print(treeTreversal([('SALET', (0, 1, 1, 0, 0)), ('DRINK', (1, 0, 1, 0, 0))], validGuess, validAnswer))

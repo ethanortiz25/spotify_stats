@@ -22,56 +22,54 @@
             <h4><a class = "bar_item" href="/service">Service</a></h4>
         </li>
         <li class = "bar_item_li">
-            <h4><a class = "bar_item" href="{{ url_for('static', filename='ethan-ortiz-resume.pdf') }}">Resume</a></p>
+            <h4><a class = "bar_item" href="{{ url_for('static', filename='ethan_ortiz_resume.pdf') }}">Resume</a></p>
         </li>
     </ul>
 </div>
 <body class = "bg-grey text-white center">
-    <body>
-        <table class = "top_table">
-            <tr>
-                <td id = "larger_side">
-                    <a href = "/login"><img src="{{ url_for('static', filename='pictures/portfolio_spotify.PNG') }}" alt="Portrait" width="100%" height="auto"></a>
-                </td>
-                <td class = "td_spacer">
-    
-                </td>
-                <td id = "smaller_side">
-                    <h1>
-                        <a class = "text-white bar_item" href = "/login">Stats for Spotify</a>
-                    </h1>
-                    <p class = "td_text">
-                        I created this website using Azure Cloud Services, a Python Flask server, and the Spotify API. On this website, the Python server, which is running on Azure cloud, accesses Spotify's API in order to show the user their top songs in a given time period. 
-                    </p>
-                </td>
-            </tr>
-        </table>
-        <table class = "sub_table">
-            <tr>
-                <td id = "smaller_side">
-                    <h1>
-                        <a class = "text-white bar_item" href = "/wordle_solver">Wordle Solver</a>
-                    </h1>
-                    <p class = "td_text">
-                        I created this website using Azure Cloud Services, and a Python Flask server. On this website, the user is told what word to guess on <a href = "https://www.nytimes.com/games/wordle/index.html">Wordle</a>. After inputting the word into whatever website they are playing in, the user reports which colors were given back onto my website. After sending a request to the server, a python script is run on the server which tells the user which word they should guess next. This process is repeated until the word is guessed correctly. In my testing the algorithm that I came up with solves the Wordle on average in 3.5 guesses.
-                    </p>
-                </td>
-    
-                
-                <td class="td_spacer">
-    
-                </td>
-                
-                <td id = "larger_side">
-                    <a  href = "/wordle_solver"><img src="{{ url_for('static', filename='pictures/portfolio_wordle.PNG') }}" alt="Portrait" width="100%" height="auto"></a>
-                </td>
-            </tr>
-        </table>
-    </body>
+    <table class = "top_table">
+        <tr>
+            <td id = "smaller_side">
+                <h1>
+                    <a class = "text-white bar_item" href = "/wordle_solver">Wordle Solver</a>
+                </h1>
+                <p class = "td_text">
+                    I created this website using Azure Cloud Services, and a Python Flask server. On this website, the user is told what word to guess on <a href = "https://www.nytimes.com/games/wordle/index.html">Wordle</a>. After inputting the word into whatever website they are playing in, the user reports which colors were given back onto my website. After sending a request to the server, a python script is run on the server which tells the user which word they should guess next. This process is repeated until the word is guessed correctly. In my testing the algorithm that I came up with solves the Wordle on average in 3.5 guesses.
+                </p>
+            </td>
+
+            
+            <td class="td_spacer">
+
+            </td>
+            
+            <td id = "larger_side">
+                <a  href = "/wordle_solver"><img src="https://lh3.google.com/u/0/d/1M-NbhsXBP_cr-g7DuMdA6gyeXpOf6dH1=w1482-h919-iv1" alt="Wordle Solver example" width="100%" height="auto"></a>
+            </td>
+        </tr>
+    </table>
     <table class = "sub_table">
         <tr>
             <td id = "larger_side">
-                <img src="{{ url_for('static', filename='pictures/cashier.png') }}" alt="Portrait" width="100%" height="auto">
+                <a href = "/login"><img src="https://lh3.google.com/u/0/d/1I8KtyaIDM_vFjOkIIieWpUsE6qrkI7vr=w1482-h919-iv1" alt="Spotify Stats example" width="100%" height="auto"></a>
+            </td>
+            <td class = "td_spacer">
+
+            </td>
+            <td id = "smaller_side">
+                <h1>
+                    <a class = "text-white bar_item" href = "/login">Stats for Spotify</a>
+                </h1>
+                <p class = "td_text">
+                    I created this website using Azure Cloud Services, a Python Flask server, and the Spotify API. On this website, the Python server, which is running on Azure cloud, accesses Spotify's API in order to show the user their top songs in a given time period. 
+                </p>
+            </td>
+        </tr>
+    </table>
+    <table class = "sub_table">
+        <tr>
+            <td id = "larger_side">
+                <img src="https://lh3.google.com/u/0/d/10WEw47RBqBwDoheT8s8t0SIGvoBMxEik=w1482-h919-iv1" alt="Point of sale system, cashier view" width="100%" height="auto">
             </td>
 
             
@@ -92,28 +90,14 @@
     <table class = "sub_table">
         <tr>
             <td style="height: 20vh;">
-                <img src="{{ url_for('static', filename='pictures/alerts.png') }}" alt="Portrait" width="100%" height="auto">
+                <img src="https://lh3.google.com/u/0/d/1P78PiozbUTDcB7n7NoaU_4q0-WQY-bHm=w1482-h919-iv1" alt="Point of sale system, edit item page" width="100%" height="auto">
             </td>
         </tr>
     </table>
     <table class = "sub_table">
         <tr>
             <td style="height: 20vh;">
-                <img src="{{ url_for('static', filename='pictures/item.png') }}" alt="Portrait" width="100%" height="auto">
-            </td>
-        </tr>
-    </table>
-    <table class = "sub_table">
-        <tr>
-            <td style="height: 20vh;">
-                <img src="{{ url_for('static', filename='pictures/sales.png') }}" alt="Portrait" width="100%" height="auto">
-            </td>
-        </tr>
-    </table>
-    <table class = "sub_table">
-        <tr>
-            <td style="height: 20vh;">
-                <img src="{{ url_for('static', filename='pictures/menu.png') }}" alt="Portrait" width="100%" height="auto">
+                <img src="https://lh3.google.com/u/0/d/1lM3Ya7VUbLwliTbMKTfmoR8oJcpnP6xy=w1482-h919-iv1" alt="Point of sale system, menu page" width="100%" height="auto">
             </td>
         </tr>
     </table>

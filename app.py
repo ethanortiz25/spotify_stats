@@ -7,7 +7,7 @@ from wordleCalculator import treeTreversal, cache_storage, runAll
 app = Flask(__name__)
 # ip = "ethanortiz.azurewebsites.net"
 # url = "http://127.0.0.1:5000"
-url = 'https://' + "ethanortiz.azurewebsites.net"  # + ":80"
+url = 'https://' + "ethanortiz-cna9c2g3emctdhdz.centralus-01.azurewebsites.net"  # + ":80"
 
 app.secret_key = b'MAKEITSTOPMAKEITSTOP'
 client_id = '05d1acf34f664eb8a4df5132a5de17e1'
@@ -85,6 +85,14 @@ def login():
 @app.route('/wordle_solver')
 def wordle_solver():
     return render_template('wordle_solver.html')
+
+@app.route('/html_test')
+def html_test():
+    return render_template('html_test.html')
+
+@app.route('/css_test')
+def css_test():
+    return render_template('css_test.html')
 
 @app.route('/callback')
 def callback():

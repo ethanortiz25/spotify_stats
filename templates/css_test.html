@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML Page</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f5f5f5;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header h1 {
+            font-weight: bold;
+            color: #3498db;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        header p {
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        section {
+            background-color: #ecf0f1;
+            margin-bottom: 30px;
+            padding: 25px;
+            border: 3px solid #3498db;
+        }
+
+        h2 {
+            color: #e74c3c;
+            font-weight: 700;
+            font-family: 'Verdana', sans-serif;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #16a085;
+            font-weight: 600;
+            font-family: 'Courier New', monospace;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #2c3e50;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #9b59b6;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #8e44ad;
+            text-decoration: underline;
+        }
+
+        ul, ol {
+            background-color: #fff3cd;
+            padding: 20px 40px;
+            margin: 15px 0;
+        }
+
+        li {
+            color: #856404;
+            font-weight: 500;
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+
+        figure {
+            background-color: #d1ecf1;
+            padding: 15px;
+            margin: 20px 0;
+            border: 2px dashed #0c5460;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        figcaption {
+            color: #0c5460;
+            font-style: italic;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #bee5eb;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+        th {
+            background-color: #27ae60;
+            color: white;
+            font-weight: bold;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            background-color: #d5f4e6;
+            color: #155724;
+            padding: 10px;
+            border: 1px solid #27ae60;
+            font-weight: 400;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #abebc6;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-weight: 300;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .margin-demo {
+            background-color: #ff6b6b;
+            color: white;
+            margin: 40px;
+            padding: 0;
+            border: 5px solid #000;
+        }
+
+        .padding-demo {
+            background-color: #4ecdc4;
+            color: white;
+            margin: 0;
+            padding: 40px;
+            border: 5px solid #000;
+        }
+
+        .both-demo {
+            background-color: #95e1d3;
+            color: #333;
+            margin: 30px;
+            padding: 30px;
+            border: 5px solid #f38181;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My HTML Practice Page</h1>
+        <p>This page is an example of basic HTML structure and elements.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>About This Page</h2>
+            <p>
+                This document was created to practice writing HTML. 
+                It includes headings, paragraphs, lists, links, images, and a table.
+            </p>
+            <p>
+                You can learn more about HTML on 
+                <a href="https://www.w3schools.com/html/" target="_blank">
+                    W3Schools
+                </a>.
+            </p>
+        </section>
+        <section>
+            <h2>Things I Like About Web Development</h2>
+
+            <h3>Unordered List</h3>
+            <ul>
+                <li>Building interactive pages</li>
+                <li>Solving problems</li>
+                <li>Learning new technologies</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+            <ol>
+                <li>Learn HTML</li>
+                <li>Add CSS styling</li>
+                <li>Make pages interactive with JavaScript</li>
+            </ol>
+        </section>
+        <section>
+            <h2>A Meaningful Image</h2>
+            <figure>
+                <img src="https://sugargeekshow.com/wp-content/uploads/2023/10/easy_chocolate_cake_slice.jpg"
+                     alt="A placeholder image representing a sample photo of a cake">
+                <figcaption>
+                    This image of a cake has semantic meaning and includes descriptive alt text.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>A Decorative Image</h2>
+            <p>
+                The image below is decorative and does not add important information.
+            </p>
+            <img src="https://stordfkenticomedia.blob.core.windows.net/df-us/rms/media/recipemediafiles/recipe%20images%20and%20files/retail/desktop%20(600x600)/2025/april/2025_retail_birthday-cake_600x600.webp?ext=.webp"
+                 alt="">
+        </section>
+
+        <section>
+            <h2>Weekly Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Activity</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Classes</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Homework</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Project Work</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Margins vs Padding Demonstration</h2>
+            <p>The boxes below show the difference between margins and padding:</p>
+            
+            <div class="margin-demo">
+                <h3 style="color: white; margin: 10px;">MARGIN Example</h3>
+                <p style="margin: 10px;">
+                    This red box has 40px margin (outside space) and no padding. 
+                    Notice the space OUTSIDE the black border.
+                </p>
+            </div>
+
+            <div class="padding-demo">
+                <h3 style="color: white; margin: 0;">PADDING Example</h3>
+                <p style="margin: 0;">
+                    This cyan box has 40px padding (inside space) and no margin. 
+                    Notice the space INSIDE the black border.
+                </p>
+            </div>
+
+            <div class="both-demo">
+                <h3>BOTH Margin + Padding</h3>
+                <p style="margin: 0;">
+                    This green box has BOTH 30px margin (outside) and 30px padding (inside).
+                    The margin creates space between this and other elements,
+                    while padding creates space between the border and this text.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ethan Ortiz</p>
+    </footer>
+
+</body>
+</html>
